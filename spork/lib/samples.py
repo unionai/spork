@@ -10,13 +10,6 @@ def is_palindrome(string):
     return string == string[::-1]
 
 
-def fibonacci(n):
-    sequence = [0, 1]
-    for i in range(2, n):
-        sequence.append(sequence[-1] + sequence[-2])
-    return sequence
-
-
 def calculator(a, b, operation):
     if operation == "add":
         return a + b
@@ -46,4 +39,48 @@ def fibonacci_dp(n):
         fib_table[i] = fib_table[i - 1] + fib_table[i - 2]
 
     return fib_table[n]
+
+
+def fibonacci(n):
+    sequence = [0, 1]
+    for i in range(2, n):
+        sequence.append(sequence[-1] + sequence[-2])
+    return sequence
+
+
+class BankAccount:
+    """
+    A simple class to represent a bank account.
+    """
+    def __init__(self, account_holder, balance=0.0):
+        self.account_holder = account_holder
+        self.balance = balance
+
+    def deposit(self, amount):
+        """
+        Deposits the specified amount into the account.
+        """
+        if amount > 0:
+            self.balance += amount
+            print(f"${amount} deposited successfully.")
+        else:
+            print("Deposit amount must be positive.")
+
+    def withdraw(self, amount):
+        """
+        Withdraws the specified amount from the account.
+        """
+        if amount > self.balance:
+            print("Insufficient funds!")
+        elif amount <= 0:
+            print("Withdrawal amount must be positive.")
+        else:
+            self.balance -= amount
+            print(f"${amount} withdrawn successfully.")
+
+    def get_balance(self):
+        """
+        Returns the current balance of the account.
+        """
+        return self.balance
 
