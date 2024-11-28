@@ -7,6 +7,9 @@ def factorial(n):
 
 
 def is_palindrome(string):
+    """
+    This function shows how to use the delta parameter of string iteration to reverse a string.
+    """
     return string == string[::-1]
 
 
