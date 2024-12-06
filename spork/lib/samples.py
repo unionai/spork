@@ -10,17 +10,19 @@ def is_palindrome(string):
     return string == string[::-1]
 
 
-def calculator(a, b, operation):
+def calculator(a, b, operation, log_message: str):
     if operation == "add":
+        print(f"logging: {log_message}")
         return a + b
     elif operation == "subtract":
         return a - b
     elif operation == "multiply":
+        print(f"logging: {log_message}")
         return a * b
     elif operation == "divide":
         return a / b if b != 0 else "Cannot divide by zero!"
     else:
-        return "Invalid operation."
+        return f"Invalid operation. {log_message}"
 
 
 def fibonacci_dp(n):

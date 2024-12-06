@@ -6,7 +6,7 @@ def main():
     numbers = [(5, 3, "add"), (10, 4, "subtract"), (7, 2, "multiply"), (9, 0, "divide"), (12, 4, "divide")]
     print("Performing calculations:")
     for a, b, operation in numbers:
-        result = calculator(a, b, operation)
+        result = calculator(a, b, operation, "first log message")
         print(f"{operation.capitalize()} {a} and {b}: {result}")
 
     print("\nFibonacci sequence and palindrome check integration:")
@@ -25,7 +25,7 @@ def main():
     for pair in fib_pairs:
         a, b = fibonacci_dp(pair[0]), fibonacci_dp(pair[1])
         for operation in operations:
-            result = calculator(a, b, operation)
+            result = calculator(a, b, operation, "using Fibonacci numbers")
             print(f"{operation.capitalize()} Fibonacci({pair[0]}) = {a} and Fibonacci({pair[1]}) = {b}: {result}")
 
 
