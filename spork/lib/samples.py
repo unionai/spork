@@ -7,6 +7,9 @@ def factorial(n):
 
 
 def is_palindrome(string):
+    """
+    an unrelated comment
+    """
     return string == string[::-1]
 
 
