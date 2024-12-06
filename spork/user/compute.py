@@ -28,6 +28,12 @@ def main():
             result = calculator(a, b, operation)
             print(f"{operation.capitalize()} Fibonacci({pair[0]}) = {a} and Fibonacci({pair[1]}) = {b}: {result}")
 
+    numbers = [(55, 33, "add"), (101, 44, "subtract")]
+    print("Performing second set of calculations:")
+    for a, b, operation in numbers:
+        result = calculator(a, b, operation)
+        print(f"{operation.capitalize()} {a} and {b}: {result}")
+
 
 if __name__ == "__main__":
     main()
